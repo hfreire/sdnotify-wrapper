@@ -1,4 +1,4 @@
-# A systemd sd_notify wrapper library
+# A :penguin: systemd sd_notify :package: wrapper library
 
 [![JavaScript Style Guide](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](http://standardjs.com/)
 [![Build Status](https://travis-ci.org/dog-ai/sdnotify-wrapper.svg?branch=master)](https://travis-ci.org/dog-ai/sdnotify-wrapper)
