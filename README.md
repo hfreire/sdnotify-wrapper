@@ -3,6 +3,7 @@
 [![JavaScript Style Guide](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](http://standardjs.com/)
 [![Build Status](https://travis-ci.org/dog-ai/sdnotify-wrapper.svg?branch=master)](https://travis-ci.org/dog-ai/sdnotify-wrapper)
 [![Coverage Status](https://coveralls.io/repos/github/dog-ai/sdnotify-wrapper/badge.svg?branch=master)](https://coveralls.io/github/dog-ai/sdnotify-wrapper?branch=master)
+[![Greenkeeper badge](https://badges.greenkeeper.io/dog-ai/sdnotify-wrapper.svg)](https://greenkeeper.io/)
 [![](https://img.shields.io/github/release/dog-ai/sdnotify-wrapper.svg)](https://github.com/dog-ai/sdnotify-wrapper/releases)
 [![Version](https://img.shields.io/npm/v/@dog-ai/sdnotify-wrapper.svg)](https://www.npmjs.com/package/@dog-ai/sdnotify-wrapper)
 [![Downloads](https://img.shields.io/npm/dt/@dog-ai/sdnotify-wrapper.svg)](https://www.npmjs.com/package/@dog-ai/sdnotify-wrapper) 
