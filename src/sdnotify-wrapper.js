@@ -8,7 +8,9 @@ const ffi = require('ffi')
 
 let libsystemd
 if (process.platform === 'linux') {
-  libsystemd = ffi.Library('libsystemd', { 'sd_notify': [ 'int', [ 'int', 'string' ] ] })
+  try {
+    libsystemd = ffi.Library('libsystemd', { 'sd_notify': [ 'int', [ 'int', 'string' ] ] })
+  } catch (error) {}
 }
 
 class SdNotifyWrapper {
@@ -18,13 +20,17 @@ class SdNotifyWrapper {
         return reject(new Error('libsystemd not found'))
       }
 
-      libsystemd.sd_notify.async(unsetEnvironment ? 1 : 0, state, (error) => {
-        if (error) {
-          return reject(error)
-        }
+      try {
+        libsystemd.sd_notify.async(unsetEnvironment ? 1 : 0, state, (error) => {
+          if (error) {
+            return reject(error)
+          }
 
-        resolve()
-      })
+          resolve()
+        })
+      } catch (error) {
+        reject(error)
+      }
     })
   }
 }
