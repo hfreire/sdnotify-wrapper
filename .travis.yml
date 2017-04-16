@@ -1,6 +1,15 @@
 language: node_js
 node_js:
-- '6.3'
+  - 6.3
+addons:
+  apt:
+    sources:
+      - ubuntu-toolchain-r-test
+    packages:
+      - g++-4.8
+      - libasound2-dev
+env:
+  - CXX=g++-4.8
 cache:
   directories:
   - node_modules
@@ -13,7 +22,7 @@ notifications:
     on_failure: always
     on_pull_requests: false
 before_script:
-- npm prune
+  - npm prune
 after_success:
-- npm run coveralls
-- npm run semantic-release
+  - npm run coveralls
+  - npm run semantic-release
