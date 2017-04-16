@@ -1,5 +1,7 @@
 # A systemd sd_notify wrapper library
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/dog-ai/sdnotify-wrapper.svg)](https://greenkeeper.io/)
+
 [![JavaScript Style Guide](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](http://standardjs.com/)
 [![Build Status](https://travis-ci.org/dog-ai/sdnotify-wrapper.svg?branch=master)](https://travis-ci.org/dog-ai/sdnotify-wrapper)
 [![Coverage Status](https://coveralls.io/repos/github/dog-ai/sdnotify-wrapper/badge.svg?branch=master)](https://coveralls.io/github/dog-ai/sdnotify-wrapper?branch=master)
