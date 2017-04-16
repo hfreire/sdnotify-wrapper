@@ -1,5 +1,5 @@
 {
-  "name": "sdnotify-wrapper",
+  "name": "@dog-ai/sdnotify-wrapper",
   "description": "A systemd sd_notify wrapper library",
   "version": "0.0.0",
   "main": "lib/index.js",
