@@ -62,12 +62,10 @@ describe('SdNotifyWrapper', () => {
       Object.defineProperty(process, 'platform', platform)
     })
 
-    it('should reject with error', (done) => {
-      subject.notify(false, state)
+    it('should reject with error', () => {
+      return subject.notify(false, state)
         .catch((_error) => {
           _error.should.be.eql(error)
-
-          done()
         })
     })
   })
@@ -79,12 +77,10 @@ describe('SdNotifyWrapper', () => {
       subject = require('../src/sdnotify-wrapper')
     })
 
-    it('should reject promise with libsystemd not found error', (done) => {
-      subject.notify(false, state)
+    it('should reject promise with libsystemd not found error', () => {
+      return subject.notify(false, state)
         .catch((error) => {
           error.message.should.be.equal('libsystemd not found')
-
-          done()
         })
     })
   })
