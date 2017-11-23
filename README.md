@@ -9,7 +9,7 @@
 [![Version](https://img.shields.io/npm/v/@dog-ai/sdnotify-wrapper.svg)](https://www.npmjs.com/package/@dog-ai/sdnotify-wrapper)
 [![Downloads](https://img.shields.io/npm/dt/@dog-ai/sdnotify-wrapper.svg)](https://www.npmjs.com/package/@dog-ai/sdnotify-wrapper) 
 
-A systemd sd_notify wrapper library.
+> A systemd sd_notify wrapper library.
 
 ### Features
 * Supports [Bluebird](https://github.com/petkaantonov/bluebird) :bird: promises :white_check_mark:
