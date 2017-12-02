@@ -2,6 +2,9 @@
   "name": "@dog-ai/sdnotify-wrapper",
   "description": "A systemd sd_notify wrapper library",
   "version": "0.0.0",
+  "engines": {
+    "node": ">= 6.0.0"
+  },
   "main": "lib/index.js",
   "repository": {
     "type": "git",
@@ -18,33 +21,36 @@
     "ffi": "2.2.0"
   },
   "devDependencies": {
-    "babel-cli": "6.24.1",
+    "babel-cli": "6.26.0",
     "babel-preset-env": "1.6.1",
-    "chai": "3.5.0",
-    "chai-as-promised": "6.0.0",
-    "coveralls": "2.13.0",
-    "eslint": "3.19.0",
-    "eslint-config-hfreire": "1.0.6",
-    "eslint-plugin-import": "2.3.0",
+    "chai": "4.1.2",
+    "chai-as-promised": "7.1.1",
+    "coveralls": "2.13.3",
+    "eslint": "4.11.0",
+    "eslint-config-hfreire": "1.0.9",
+    "eslint-plugin-import": "2.8.0",
     "eslint-plugin-json": "1.2.0",
-    "eslint-plugin-mocha": "4.9.0",
-    "eslint-plugin-node": "5.0.0",
-    "eslint-plugin-promise": "3.5.0",
+    "eslint-plugin-mocha": "4.11.0",
+    "eslint-plugin-node": "5.2.1",
+    "eslint-plugin-promise": "3.6.0",
     "eslint-plugin-standard": "3.0.1",
-    "eslint-plugin-unicorn": "2.1.1",
+    "eslint-plugin-unicorn": "3.0.0",
     "istanbul": "0.4.5",
-    "mocha": "3.2.0",
-    "semantic-release": "6.3.2",
-    "pre-git": "3.14.0",
-    "testdouble": "2.1.2"
+    "mocha": "4.0.1",
+    "pre-git": "3.16.0",
+    "semantic-release": "9.1.0",
+    "testdouble": "3.2.6"
   },
   "config": {
     "pre-git": {
-      "commit-msg": "conventional"
+      "commit-msg": "conventional",
+      "allow-untracked-files": true
     }
   },
+  "release": {
+    "analyzeCommits": "simple-commit-message"
+  },
   "scripts": {
-    "commit": "./node_modules/.bin/commit-wizard",
     "clean": "rm -rf lib coverage",
     "lint": "node_modules/.bin/eslint . --ext .json --ext .js",
     "coverage": "node_modules/.bin/istanbul cover --include-all-sources --root src --print detail ./node_modules/mocha/bin/_mocha -- --recursive test",
@@ -52,6 +58,7 @@
     "compile": "npm run clean && mkdir -p lib && ./node_modules/.bin/babel src/ -d lib",
     "prepublish": "npm run compile",
     "coveralls": "cat ./coverage/lcov.info | ./node_modules/.bin/coveralls",
-    "semantic-release": "./node_modules/.bin/semantic-release pre && npm publish && node_modules/.bin/semantic-release post"
+    "semantic-release": "./node_modules/.bin/semantic-release",
+    "commit": "./node_modules/.bin/commit-wizard"
   }
 }
