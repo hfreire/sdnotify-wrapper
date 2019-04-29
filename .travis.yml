@@ -1,15 +1,15 @@
 language: node_js
 node_js:
-  - 8.9.0
+- 8.9.0
 addons:
   apt:
     sources:
-      - ubuntu-toolchain-r-test
+    - ubuntu-toolchain-r-test
     packages:
-      - g++-4.8
-      - libasound2-dev
+    - g++-4.8
+    - libasound2-dev
 env:
-  - CXX=g++-4.8
+- CXX=g++-4.8
 cache:
   directories:
   - node_modules
@@ -17,12 +17,12 @@ notifications:
   email: false
   slack:
     rooms:
-      secure: Ijtfw9g9bkzDykAeuQc4OffsIigmI1sG15eoiE97HlNYZW/q/RkOcyUPfpNvzgo8jby/IdvTjqtRf90IB63hG0nHUBEzxAxbiAi/r6b+KzSRpYNbkXZGlx2i8dHwibT2NVRuowMWRAa6nlh8EUQTCVBuIdQaI83ipmiAoGRFNr+SSO+snhGNfVZoOK2JGbvScgiaBWZRLE9TfjWli0vuuVSj6g4vVVl6TGjNHe5aplYFpeCZTAfiJO/gx9frNx8d3eMMdZ/7rYIHSCPnQhiY7bS24Q3/CKHGiu4ZBNHXYvXjUBlmVANzvgMcm826O85Aa2gTju5A+uK38DstLKWeBU/lk5ONbSKdlVrvjcKfzV2gkgobTeK46NmOZ5/GVFyRDRIUhdoKEEQSLJnuFG/IKh0OhVsoOJcCSZXKUakAw9tN2LiAttpLEe4gkW6YW+AJkbWYH1ZZvBA/DsFa5VWpjkEONfiGK+i1rXt6JXj/0YXlUb54Sb6de/eOwuCnlH/w5PU6pZRSI+w0MQkl57V0JDSZsWGEnxOeI0apwHZVWdZ0ThboRy7R/EoAhYHNhKwAEtYqXX8domL0cYDK7G1sFwDgF0yHDxp3FkN1I3/5QBtF6bds4kWGFbQEbN5pnYPRlxJ+aEDC0lgo9mXC30IR/PZqSQmAdmAk+maywGZyzWo=
+      secure: qFxz3LjwPA+DU8B24uyzqaHy1fcJVGuHN/djdTN9Tz9jQv2Vr7BAV26bXkHy7og3JD0JhD94p4z0TH/abwCEpHFR8+UNwIQxscZipZEhmMyGdVS9BdtbatPAvQkYbxqGjxekVK+pyyKXrbqb+co5bX6q6/ThXccPrmpnvREQ3j+Tif2SlAlfj1u2mLJsCC+TvyzWcB7iJ3PSTio24YTFyu2Sb89jlZgh9UBIL82pteUMnxEbe0+Cn1Ixw5OhTBKDhvvxO53D0KODPcQZqoLmEs32hSIdzM2dr6nIMkzMqVDoCVNOauo4oP/3TSKa6Tv6q5PUcAOvD+ES9BDYxeKxarTmLn4cnGL/a4pbNVTpAYdYI1w7tGTZTO0uRnqzZ6sgfcsMg+ATX1tlBwwZU4stFBTOPHJGeGSmcfVAwZuMzdbFa23pbXqrMspYfTZGhw838lH7gj6Ws3qycxc4WiC7N2cGCMiusGnQjp7XEpQtK+fV0zKvm3kjWzeBwRH+YW5IhxQyeH76uC56Ty/bXy/La8L0hBLiKG+gcn8jQ96Elo98PcDhwLifaB7uH0oFgPlv2HTW/s+98KsWOp1qJbhFlwFPaRr5Ayl2TxBe9/qU1UHtUs43G0qQ3bzwsa472ASPRIq4ouFBVcuzpUpZZOMiu9o6253A68/lGo19M23STfs=
     on_success: never
     on_failure: always
     on_pull_requests: false
 before_script:
-  - npm prune
+- npm prune
 after_success:
-  - npm run coveralls
-  - npm run semantic-release
+- npm run coveralls
+- npm run semantic-release
