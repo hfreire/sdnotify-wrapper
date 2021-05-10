@@ -29,7 +29,7 @@
     "eslint": "6.1.0",
     "eslint-config-hfreire": "1.1.2",
     "eslint-plugin-import": "2.19.1",
-    "eslint-plugin-json": "1.4.0",
+    "eslint-plugin-json": "3.0.0",
     "eslint-plugin-mocha": "7.0.0",
     "eslint-plugin-node": "9.1.0",
     "eslint-plugin-promise": "4.1.1",
